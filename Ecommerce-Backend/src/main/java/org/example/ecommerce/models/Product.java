@@ -63,11 +63,9 @@ public class Product {
     @JsonIgnore
     private Set<CartItem> cartItem;
 
-    @CreatedDate
-    private LocalDateTime createdAt;
+    private LocalDateTime createdAt= LocalDateTime.now();
 
-    @LastModifiedDate
-    private LocalDateTime updatedAt;
+    private LocalDateTime updatedAt= LocalDateTime.now();
 
     @Column(name = "sales")
     private int salePercentage;
